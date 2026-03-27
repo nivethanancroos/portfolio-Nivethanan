@@ -9,13 +9,11 @@ const Navbar = () => {
   const navLinks = ["Home", "About", "Projects", "Skills", "Contact"];
 
   return (
-    <div className="fixed top-5 left-0 w-full flex justify-center z-50 px-4">
+    <div className="fixed top-5 left-0 w-full flex justify-center z-50">
       <nav
-        className={`relative w-full max-w-7xl h-16 flex items-center justify-between transition-all duration-300
-                   /* Mobile Styles: Pill shape with background */
-                   backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg px-6 
-                   /* Desktop Styles: Transparent and no border/shadow */
-                   md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none md:px-10 lg:px-12`}
+        className={`relative w-full px-12 h-16 flex items-center justify-between transition-all duration-300
+               backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg px-0
+               md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none`}
       >
         {/* MOBILE ONLY LOGO */}
         <div className="md:hidden">
@@ -47,7 +45,7 @@ const Navbar = () => {
               rel="noreferrer"
               className="text-lg text-[#2f2a26] hover:scale-110 hover:text-[#d4a017] transition"
             >
-              <FaLinkedin />
+              <FaLinkedin size={22} />
             </a>
             <a
               href="https://github.com"
@@ -55,7 +53,7 @@ const Navbar = () => {
               rel="noreferrer"
               className="text-lg text-[#2f2a26] hover:scale-110 hover:text-[#d4a017] transition"
             >
-              <FaGithub />
+              <FaGithub size={22} />
             </a>
           </div>
 
@@ -65,7 +63,7 @@ const Navbar = () => {
             className="flex items-center gap-2 bg-[#2f2a26] text-white text-xs lg:text-sm px-5 py-2.5 rounded-full hover:bg-[#d4a017] hover:text-[#2f2a26] transition-all duration-300 shadow-md font-bold whitespace-nowrap"
           >
             <FiDownload className="text-base" />
-            CV
+            Download CV
           </a>
         </div>
 
