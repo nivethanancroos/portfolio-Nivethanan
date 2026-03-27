@@ -4,40 +4,53 @@ import profile from "../../assets/Images/profile-Nive.png";
 const Hero = () => {
   return (
     <section
-      className="flex items-center justify-between px-16 py-12 bg-[#f4f2f0]"
       id="home"
+      className="min-h-screen bg-[#f4f2f0] flex items-center justify-center px-6 md:px-16"
     >
-      {/* Left Content */}
-      <div className="max-w-[400px]">
-        <h1 className="text-[28px] font-semibold text-[#5a4634]">
-          A.R Nivethanan Croos
-        </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 w-full max-w-6xl">
+        {/* Left Content */}
+        <div className="text-center md:text-left">
+          <h1 className="text-[24px] md:text-[28px] font-semibold text-[#5a4634]">
+            A.R Nivethanan Croos
+          </h1>
 
-        <h3 className="text-[15px] text-[#5a4634] mt-2">
-          BSc Computer Engineering | University Of Jaffna
-        </h3>
+          <h3 className="text-[14px] text-[#5a4634] mt-2">
+            BSc Computer Engineering <br />
+            University Of Jaffna
+          </h3>
 
-        <p className="text-[12px] text-[#7a6a5a] mt-3 leading-relaxed">
-          Specializing in Frontend Development, UI/UX Design, and Graphic
-          Design, With A Focus On Crafting Clean Interfaces And Engaging Digital
-          Experiences.
-        </p>
-      </div>
+          <p className="text-[12px] text-[#7a6a5a] mt-3 leading-relaxed">
+            Specializing in Frontend Development, UI/UX Design, and Graphic
+            Design, crafting clean interfaces and engaging experiences.
+          </p>
+        </div>
 
-      {/* Center Image */}
-      <div className="flex justify-center">
-        <img src={profile} alt="profile" className="w-[300px] object-contain" />
-      </div>
+        {/* Center Image (MAIN FOCUS) */}
+        <div className="flex justify-center">
+          <div className="relative">
+            <img
+              src={profile}
+              alt="profile"
+              className="w-[350px] md:w-[420px] lg:w-[500px] object-contain"
+            />
 
-      {/* Right Content */}
-      <div className="text-left">
-        <h2 className="text-[26px] font-semibold text-[#5a4634]">
-          Software Engineer
-        </h2>
+            {/* Optional subtle glow effect */}
+            <div className="absolute inset-0 bg-white/20 blur-2xl -z-10 rounded-full"></div>
+          </div>
+        </div>
 
-        <p className="text-[14px] text-[#5a4634] mt-2">Frontend Developer</p>
-        <p className="text-[14px] text-[#5a4634]">UI/UX Designer</p>
-        <p className="text-[14px] text-[#5a4634]">Graphic Designer</p>
+        {/* Right Content */}
+        <div className="text-center md:text-right">
+          <h2 className="text-[22px] md:text-[26px] font-semibold text-[#5a4634]">
+            Software Engineer
+          </h2>
+
+          <div className="mt-3 space-y-1 text-[14px] text-[#5a4634]">
+            <p>Frontend Developer</p>
+            <p>UI/UX Designer</p>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
       </div>
     </section>
   );
