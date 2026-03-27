@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-5 left-0 w-full flex justify-center z-50 px-4">
-      <nav className="relative w-full max-w-7xl backdrop-blur-xl bg-white/70 border border-white/30 rounded-full px-8 h-[64px] flex items-center justify-between shadow-lg">
+      <nav className="relative w-full max-w-7xl backdrop-blur-xl bg-white/70 border border-white/30 rounded-full px-8 h-16 flex items-center justify-between shadow-lg">
         {/* LEFT - Logo (Improved) */}
         <h1 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight cursor-pointer">
           Nive<span className="text-black">.</span>
@@ -25,7 +25,7 @@ const Navbar = () => {
               className="relative group"
             >
               {link}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
