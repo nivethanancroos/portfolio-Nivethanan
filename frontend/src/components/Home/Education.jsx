@@ -1,77 +1,183 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Education = () => {
   const educationData = [
     {
-      title: "Bachelor of Science of Engineering in Computer Engineering",
+      id: 1,
+      title: "B.Sc. Eng. (Hons) in Computer Engineering",
       place: "University of Jaffna",
-      period: "April 2021 - Present",
-      desc: "Undergraduate focusing on software engineering, UI/UX, and modern web technologies.",
+      period: "April 2021 — Aug 2026",
+      desc: "Pursuing Computer Engineering with a solid foundation in computing, focused on developing scalable software solutions and intuitive user experiences while strengthening problem-solving and practical development skills.",
+      highlights: [
+        "Software Engineering",
+        "Software Construction",
+        "Datastructures & Algorithms",
+        "Databse Systems",
+        "Operating Systems",
+        "Computer Network Security",
+        "Computer Architecture",
+        "Machine Learning",
+        "Deep Learning",
+        "Artificial Intelligence",
+      ],
     },
     {
-      title: "G.C.E (A/L) – Physical Science",
-      place: "MnSt.Anne’s College, Vankalai",
-      period: "May 2017 - Aug 2019",
-      result: "Results: 3B",
-      desc: "Specialized in Mathematics, Physics, and Chemistry with strong analytical skills.",
+      id: 2,
+      title: "G.C.E. Advanced Level",
+      place: "Mn/St. Anne’s National College",
+      period: "May 2017 — Aug 2019",
+      result: "Results: 3B (Physical Science)",
+      desc: "Built a strong foundation in mathematics, physics, and analytical problem-solving.",
+      highlights: ["Combined Mathematics", "Physics", "Chemistry"],
     },
     {
-      title: "Grade 01 - G.C.E (O/L)",
-      place: "MnSt.Anne’s College, Vankalai",
-      period: "Jan 2006 - Dec 2016",
-      result: "Results: 7A 2B",
-      desc: "Built a strong academic foundation with excellent performance.",
+      id: 3,
+      title: "G.C.E. Ordinary Level",
+      place: "Mn/St. Anne’s National College",
+      period: "Jan 2006 — Dec 2016",
+      result: "Results: 8A, C",
+      desc: "Foundational education with a focus on well-rounded academic development and versatile learning across core subjects.",
+      highlights: [
+        "Mathematics",
+        "Science",
+        "English Language",
+        "Tamil Language & Literature",
+        "Catholicism",
+        "History",
+        "ICT",
+        "Art",
+        "Business Studies",
+      ],
     },
   ];
+
+  const [activeTab, setActiveTab] = useState(educationData[0]);
 
   return (
     <section
       id="education"
-      className="bg-[#f4f2f0] py-24 px-6 md:px-12 lg:px-20"
+      className="bg-[#f9fafb] py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* HEADER */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2f2a26] mb-4">
-          Education
-        </h2>
-        <div className="h-1 w-20 bg-[#d4a017] mb-12 rounded-full"></div>
+        <div className="mb-10 md:mb-16">
+          <h2 className="text-xs md:text-sm font-bold tracking-widest text-[#d4a017] uppercase mb-2">
+            Academic Background
+          </h2>
+          <div className="flex items-center gap-4">
+            <h3 className="text-2xl md:text-4xl font-extrabold text-[#1a1a1a]">
+              Education
+            </h3>
+            <div className="h-[2px] flex-grow bg-slate-200 mt-2"></div>
+          </div>
+        </div>
 
-        {/* TIMELINE */}
-        <div className="relative border-l-2 border-[#d4a017]/40 pl-8 space-y-10">
-          {educationData.map((edu, index) => (
-            <div key={index} className="relative group">
-              {/* DOT */}
-              <div className="absolute -left-[11px] top-2 w-5 h-5 bg-[#d4a017] rounded-full border-4 border-white shadow-md group-hover:scale-110 transition"></div>
+        {/* MOBILE: Horizontal Scroll Timeline */}
+        <div className="md:hidden mb-8 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4">
+            {educationData.map((edu) => (
+              <div
+                key={edu.id}
+                onClick={() => setActiveTab(edu)}
+                className={`min-w-[250px] p-4 rounded-2xl border cursor-pointer transition ${
+                  activeTab.id === edu.id
+                    ? "border-[#d4a017] bg-[#d4a017]/5"
+                    : "border-slate-200 bg-white"
+                }`}
+              >
+                <p className="text-xs text-slate-400 mb-1">{edu.period}</p>
+                <h4 className="font-bold text-sm">{edu.title}</h4>
+                <p className="text-xs text-slate-600">{edu.place}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-              {/* CARD */}
-              <div className="bg-white/80 backdrop-blur-lg p-6 rounded-2xl shadow-md border border-white/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-lg md:text-xl font-semibold text-[#2f2a26]">
+        {/* DESKTOP GRID (unchanged) */}
+        <div className="hidden md:grid md:grid-cols-2 gap-12 lg:gap-24">
+          {/* LEFT SIDE */}
+          <div className="space-y-12">
+            {educationData.map((edu) => (
+              <div
+                key={edu.id}
+                onMouseEnter={() => setActiveTab(edu)}
+                className={`relative pl-8 border-l-2 transition-all duration-300 cursor-pointer group ${
+                  activeTab.id === edu.id
+                    ? "border-[#d4a017]"
+                    : "border-slate-200"
+                }`}
+              >
+                <div
+                  className={`absolute -left-[5.5px] top-1 w-[9px] h-[9px] rounded-full ${
+                    activeTab.id === edu.id
+                      ? "bg-[#d4a017] scale-125"
+                      : "bg-slate-300"
+                  }`}
+                ></div>
+
+                <p className="text-sm font-semibold text-slate-400 mb-2">
+                  {edu.period}
+                </p>
+
+                <h3
+                  className={`text-xl font-bold ${
+                    activeTab.id === edu.id
+                      ? "text-[#d4a017]"
+                      : "text-[#2f2a26]"
+                  }`}
+                >
                   {edu.title}
                 </h3>
 
-                <p className="text-[#d4a017] font-medium text-sm mt-1">
-                  {edu.place}
-                </p>
-
-                <p className="text-sm text-slate-500 mb-2">{edu.period}</p>
+                <p className="text-md text-slate-700 mt-1">{edu.place}</p>
 
                 {edu.result && (
-                  <p className="text-sm font-semibold text-[#2f2a26] mb-2">
+                  <span className="inline-block mt-2 text-sm font-bold bg-slate-100 px-2 py-0.5 rounded">
                     {edu.result}
-                  </p>
+                  </span>
                 )}
-
-                <p className="text-slate-600 leading-relaxed">{edu.desc}</p>
               </div>
+            ))}
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="relative">
+            <div className="sticky top-24">
+              <DetailsCard activeTab={activeTab} />
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* DECORATIVE BLOBS */}
-        <div className="absolute right-10 bottom-10 w-32 h-32 bg-[#d4a017]/20 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute left-10 top-10 w-24 h-24 bg-[#2f2a26]/10 rounded-full blur-2xl opacity-40"></div>
+        {/* MOBILE DETAILS */}
+        <div className="md:hidden">
+          <DetailsCard activeTab={activeTab} />
+        </div>
       </div>
     </section>
+  );
+};
+
+/* Extracted component for reuse */
+const DetailsCard = ({ activeTab }) => {
+  return (
+    <div className="bg-white p-5 md:p-8 rounded-3xl shadow-xl border">
+      <h4 className="text-lg md:text-xl font-bold mb-4">Learning Highlights</h4>
+
+      <p className="text-sm md:text-base text-slate-600 mb-6 italic">
+        "{activeTab.desc}"
+      </p>
+
+      <div className="flex flex-wrap gap-2">
+        {activeTab.highlights.map((skill, i) => (
+          <span
+            key={i}
+            className="px-3 py-1.5 text-xs md:text-sm bg-slate-100 rounded-full"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 };
 
