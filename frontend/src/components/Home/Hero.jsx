@@ -11,7 +11,7 @@ const Hero = () => {
       {/* DOT PATTERN BACKGROUND */}
       <DotPattern
         className="z-0 opacity-40 mix-blend-multiply"
-        baseColor="#d7d4ca"
+        baseColor="#dddad0"
         glowColor="#d4a017"
         dotSize={2}
         gap={26}

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const navLinks = ["Home", "About", "Projects", "Skills", "Contact"];
 
-  // ✅ Close on outside click
+  //  Close on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -22,7 +22,7 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // ✅ Close on ESC
+  //  Close on ESC
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -31,12 +31,12 @@ const Navbar = () => {
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
-  // ✅ Prevent scroll when menu open
+  //  Prevent scroll when menu open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
-  // ✅ Hide/show navbar on scroll (MOBILE ONLY)
+  //  Hide/show navbar on scroll (MOBILE ONLY)
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth >= 768) return; // only mobile
