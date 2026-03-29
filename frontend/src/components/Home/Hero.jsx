@@ -4,10 +4,7 @@ import DotPattern from "../UI/DotPattern";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative min-h-[80vh] lg:min-h-screen lg:h-screen bg-[#f4f2f0] flex items-center justify-center px-6 md:px-12 pt-32 lg:pt-0 pb-12 lg:py-0 overflow-hidden"
-    >
+    <section className="relative min-h-[70vh] lg:min-h-screen lg:h-screen bg-[#f4f2f0] flex items-start lg:items-center justify-center px-6 md:px-12 pt-32 lg:pt-0 lg:py-0 overflow-hidden">
       {/* DOT PATTERN BACKGROUND */}
       <DotPattern
         className="z-0 opacity-40 mix-blend-multiply"
@@ -53,7 +50,7 @@ const Hero = () => {
         </div>
 
         {/* CENTER IMAGE */}
-        <div className="order-2 flex justify-center items-end relative lg:static h-[40vh] sm:h-[50vh] lg:h-full">
+        <div className="order-2 flex justify-center items-end relative lg:static flex-1 lg:h-full">
           <div className="lg:absolute lg:bottom-0 z-10 transition-transform duration-500 hover:scale-[1.02] flex justify-center items-end">
             <img
               src={profile}
