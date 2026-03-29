@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="fixed top-5 left-0 w-full flex justify-center z-50">
       <nav
         className={`relative w-full px-12 h-16 flex items-center justify-between transition-all duration-300
-               backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg px-0
+               backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg 
                md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none`}
       >
         {/* MOBILE ONLY LOGO */}
@@ -91,7 +91,7 @@ const Navbar = () => {
           Nive<span className="text-[#d4a017]">.</span>
         </h1>
 
-        <div className="h-[1px] w-12 bg-[#d4a017]/40"></div>
+        <div className="h-px w-12 bg-[#d4a017]/40"></div>
 
         <div className="flex flex-col items-center gap-5 w-full">
           {navLinks.map((link, index) => (
@@ -106,7 +106,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="h-[1px] w-full bg-[#2f2a26]/10"></div>
+        <div className="h-px w-full bg-[#2f2a26]/10"></div>
 
         <div className="flex items-center gap-8">
           <a
