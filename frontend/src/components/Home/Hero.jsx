@@ -21,7 +21,7 @@ const Hero = () => {
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[40%] bg-[#d4a017] blur-[100px] md:blur-[120px] rounded-full opacity-15 z-0"></div>
 
-      {/* ✅ REMOVED pointer-events-none */}
+      {/*  REMOVED pointer-events-none */}
       <div className="grid grid-cols-1 lg:grid-cols-3 items-center lg:items-end gap-8 lg:gap-4 w-full max-w-360 z-10">
         {/* LEFT CONTENT */}
         <div className="order-1 space-y-5 text-center lg:text-left lg:pb-8">
@@ -30,7 +30,7 @@ const Hero = () => {
               A.R <span className="text-[#d4a017]">Nivethanan</span>
               <span className="inline md:block"> Croos</span>
             </h1>
-            <div className="h-1.5 w-20 bg-[#2f2a26] mx-auto lg:ml-0 rounded-full"></div>
+            <div className="h-1 w-20 bg-[#2f2a26] mx-auto lg:ml-0 rounded-full lg:h-1.5"></div>
           </div>
 
           <h2 className="text-base md:text-lg text-[#2f2a26] font-semibold tracking-wider flex flex-wrap justify-center lg:justify-start items-center gap-2">

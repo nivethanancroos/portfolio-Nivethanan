@@ -1,28 +1,86 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const menuRef = useRef(null);
+  const lastScrollY = useRef(0);
 
   const navLinks = ["Home", "About", "Projects", "Skills", "Contact"];
 
+  // ✅ Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // ✅ Close on ESC
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  // ✅ Prevent scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
+  // ✅ Hide/show navbar on scroll (MOBILE ONLY)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth >= 768) return; // only mobile
+
+      const currentScrollY = window.scrollY;
+
+      // prevent tiny scroll jitter
+      if (Math.abs(currentScrollY - lastScrollY.current) < 5) return;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setShowNav(false); // scroll down → hide
+      } else {
+        setShowNav(true); // scroll up → show
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed top-5 left-0 w-full flex justify-center z-50">
+    <div
+      className={`fixed left-0 w-full flex justify-center z-50 transition-transform duration-300
+      ${showNav ? "translate-y-0" : "-translate-y-full"}
+      top-4 md:top-5`}
+    >
+      {/* NAVBAR */}
       <nav
-        className={`relative w-full px-12 h-16 flex items-center justify-between transition-all duration-300
-               backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg 
-               md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none`}
+        ref={menuRef}
+        className={`relative w-[92%] md:w-full px-6 md:px-12 h-14 md:h-16 flex items-center justify-between transition-all duration-300
+        backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg 
+        pt-1 md:pt-0
+        md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none`}
       >
-        {/* MOBILE ONLY LOGO */}
+        {/* MOBILE LOGO */}
         <div className="md:hidden">
-          <h1 className="text-xl font-bold text-[#2f2a26] tracking-tight">
+          <h1 className="text-lg font-bold text-[#2f2a26] tracking-tight">
             Nive<span className="text-[#d4a017]">.</span>
           </h1>
         </div>
 
-        {/* DESKTOP LEFT - Nav Links (Now appears on transparent background) */}
+        {/* DESKTOP LEFT */}
         <div className="hidden md:flex items-center gap-6 lg:gap-10 text-sm font-semibold text-[#2f2a26]/80">
           {navLinks.map((link, index) => (
             <a
@@ -36,7 +94,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* DESKTOP RIGHT - Icons + CV */}
+        {/* DESKTOP RIGHT */}
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
           <div className="flex items-center gap-4 border-r border-[#2f2a26]/10 pr-4">
             <a
@@ -67,11 +125,11 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* MOBILE VIEW - Hamburger */}
+        {/* MOBILE MENU BUTTON */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-2xl text-[#2f2a26] p-2 hover:text-[#d4a017] transition-colors"
+            className="text-xl text-[#2f2a26] p-2 hover:text-[#d4a017] transition-colors"
             aria-label="Toggle Menu"
           >
             {isOpen ? <HiX /> : <HiMenu />}
@@ -79,27 +137,27 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE DROPDOWN MENU - Keeps the background styles */}
+      {/* MOBILE DROPDOWN */}
       <div
-        className={`absolute top-20 left-1/2 -translate-x-1/2 w-[95%] max-w-sm bg-white/95 backdrop-blur-2xl border border-[#d4a017]/30 rounded-3xl shadow-2xl py-8 px-6 flex flex-col items-center gap-6 md:hidden transition-all duration-300 origin-top ${
+        className={`absolute top-16 left-1/2 -translate-x-1/2 w-[92%] max-w-xs bg-white/95 backdrop-blur-2xl border border-[#d4a017]/30 rounded-2xl shadow-2xl py-6 px-5 flex flex-col items-center gap-5 md:hidden transition-all duration-300 origin-top ${
           isOpen
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <h1 className="text-2xl font-bold text-[#2f2a26]">
+        <h1 className="text-xl font-bold text-[#2f2a26]">
           Nive<span className="text-[#d4a017]">.</span>
         </h1>
 
-        <div className="h-px w-12 bg-[#d4a017]/40"></div>
+        <div className="h-px w-10 bg-[#d4a017]/40"></div>
 
-        <div className="flex flex-col items-center gap-5 w-full">
+        <div className="flex flex-col items-center gap-4 w-full">
           {navLinks.map((link, index) => (
             <a
               key={index}
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="text-[#2f2a26] font-bold text-xl hover:text-[#d4a017] transition-colors"
+              className="text-[#2f2a26] font-bold text-lg hover:text-[#d4a017] transition-colors"
             >
               {link}
             </a>
@@ -108,17 +166,11 @@ const Navbar = () => {
 
         <div className="h-px w-full bg-[#2f2a26]/10"></div>
 
-        <div className="flex items-center gap-8">
-          <a
-            href="#"
-            className="text-2xl text-[#2f2a26] hover:text-[#d4a017] transition-colors"
-          >
+        <div className="flex items-center gap-6">
+          <a href="#" className="text-xl hover:text-[#d4a017]">
             <FaLinkedin />
           </a>
-          <a
-            href="#"
-            className="text-2xl text-[#2f2a26] hover:text-[#d4a017] transition-colors"
-          >
+          <a href="#" className="text-xl hover:text-[#d4a017]">
             <FaGithub />
           </a>
         </div>
@@ -126,9 +178,9 @@ const Navbar = () => {
         <a
           href="/cv.pdf"
           download
-          className="w-full flex justify-center items-center gap-3 bg-[#d4a017] text-[#2f2a26] py-4 rounded-2xl text-base font-extrabold shadow-lg active:scale-95 transition-transform"
+          className="w-full flex justify-center items-center gap-2 bg-[#d4a017] text-[#2f2a26] py-3 rounded-xl text-sm font-bold shadow-md active:scale-95"
         >
-          <FiDownload className="text-xl" />
+          <FiDownload />
           Download CV
         </a>
       </div>
