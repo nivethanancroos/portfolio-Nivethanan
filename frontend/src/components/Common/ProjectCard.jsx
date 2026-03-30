@@ -38,7 +38,7 @@ const ProjectCard = ({ image, title, desc, tech, link, github }) => {
         </div>
 
         {/* Spacer */}
-        <div className="flex-grow"></div>
+        <div className="grow"></div>
 
         {/* Buttons */}
         <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
