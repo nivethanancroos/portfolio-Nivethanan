@@ -1,13 +1,22 @@
 import React from "react";
 import ProjectCard from "../Common/ProjectCard";
-import LookupImage from "../../assets/Images/POST1.jpg";
+import LookupImage from "../../assets/Images/lookup-portfolio2.jpg";
+import IMS from "../../assets/Images/IMS.png";
+import Grazartgallery from "../../assets/Images/graz-gallery-art-portfolio.jpg";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
       title: "Inventory Management System ",
-      desc: "A full-stack web-based system for managing laboratory inventory, supporting role-based access, item tracking, issue/return management, and reporting across multiple locations.",
+      desc: (
+        <>
+          A full-stack web-based Inventory Management System developed for the{" "}
+          <strong>University of Jaffna</strong>, supporting role-based access,
+          item tracking, issue/return management, and reporting across multiple
+          locations.
+        </>
+      ),
       tech: [
         "React",
         "Tailwind CSS",
@@ -16,7 +25,7 @@ const Projects = () => {
         "PostgreSQL",
         "AWS",
       ],
-      image: "https://via.placeholder.com/400x300",
+      image: IMS,
       link: "#",
       github: "#",
     },
@@ -40,10 +49,17 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Fire Detection System (ESP32)",
-      desc: "Embedded system using sensors to detect fire hazards and trigger alerts in real-time.",
-      tech: ["ESP32", "Arduino", "IoT"],
-      image: "https://via.placeholder.com/400x300",
+      title: "Graz Art Gallery Website",
+      desc: "Developed a full-stack e-commerce art gallery website with dynamic artwork display, product showcasing, and backend-driven gallery and product management.",
+      tech: [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cloudinary",
+      ],
+      image: Grazartgallery,
       link: "#",
       github: "#",
     },
