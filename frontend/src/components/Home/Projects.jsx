@@ -6,19 +6,35 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Lookup Gift Store Website",
-      desc: "A modern e-commerce platform for customized gifts with ordering and delivery features.",
-      tech: ["React", "Tailwind", "Node.js"],
-      image: LookupImage,
+      title: "Inventory Management System ",
+      desc: "A full-stack web-based system for managing laboratory inventory, supporting role-based access, item tracking, issue/return management, and reporting across multiple locations.",
+      tech: [
+        "React",
+        "Tailwind CSS",
+        "Spring Boot",
+        "Spring Security",
+        "PostgreSQL",
+        "AWS",
+      ],
+      image: "https://via.placeholder.com/400x300",
       link: "#",
       github: "#",
     },
     {
       id: 2,
-      title: "University Assistant Chatbot",
-      desc: "An AI-powered chatbot designed to assist students with academic and university-related queries.",
-      tech: ["React", "Python", "NLP"],
-      image: "https://via.placeholder.com/400x300",
+      title: "Lookup Gift Store Website",
+      desc: "Developed a full-stack showcase web application for Lookup using React, Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven gallery management.",
+      tech: [
+        "React",
+        "Tailwind CSS",
+
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+
+        "Cloudinary",
+      ],
+      image: LookupImage,
       link: "#",
       github: "#",
     },
