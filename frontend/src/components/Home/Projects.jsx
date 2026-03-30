@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../Common/ProjectCard";
+import LookupImage from "../../assets/Images/POST1.jpg";
 
 const Projects = () => {
   const projects = [
@@ -8,7 +9,7 @@ const Projects = () => {
       title: "Lookup Gift Store Website",
       desc: "A modern e-commerce platform for customized gifts with ordering and delivery features.",
       tech: ["React", "Tailwind", "Node.js"],
-      image: "https://via.placeholder.com/400x300",
+      image: LookupImage,
       link: "#",
       github: "#",
     },
