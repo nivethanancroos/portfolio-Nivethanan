@@ -80,16 +80,35 @@ const Navbar = () => {
           </h1>
         </div>
 
-        {/* DESKTOP LEFT */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-10 text-sm font-semibold text-[#2f2a26]/80">
+        {/* DESKTOP LEFT - Refined UX Navigation */}
+        <div
+          className="hidden md:flex items-center gap-1 p-1.5
+  backdrop-blur-2xl bg-white/40 border border-white/40 
+  rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.04)]"
+        >
           {navLinks.map((link, index) => (
             <a
               key={index}
               href={`#${link.toLowerCase()}`}
-              className="relative group hover:text-[#d4a017] transition-colors"
+              className="relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase text-[#2f2a26]/70 
+      transition-all duration-300 ease-in-out rounded-full group hover:text-[#2f2a26]"
             >
-              {link}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#d4a017] transition-all duration-300 group-hover:w-full"></span>
+              {/* The Text Label */}
+              <span className="relative z-10 transition-transform duration-300 group-hover:scale-105 inline-block">
+                {link}
+              </span>
+
+              {/* Modern Hover Interaction: Soft Capsule Background */}
+              <span
+                className="absolute inset-0 z-0 bg-white/60 rounded-full scale-90 opacity-0 
+        transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100 shadow-sm"
+              ></span>
+
+              {/* The "Active/Focus" Indicator: Minimalist Dot */}
+              <span
+                className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#d4a017] 
+        rounded-full opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:bottom-1"
+              ></span>
             </a>
           ))}
         </div>
