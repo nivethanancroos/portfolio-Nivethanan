@@ -141,7 +141,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[70vh] lg:min-h-screen lg:h-screen bg-[#f4f2f0] flex items-start lg:items-center justify-center px-6 md:px-12 pt-32 lg:pt-0 lg:py-0 overflow-hidden"
+      className="relative min-h-[70vh] lg:min-h-screen lg:h-screen bg-[#ffffff] flex items-start lg:items-center justify-center px-6 md:px-12 pt-32 lg:pt-0 lg:py-0 overflow-hidden"
     >
       {/* DOT PATTERN BACKGROUND */}
       <DotPattern
