@@ -10,7 +10,6 @@ const Home = () => {
     <div>
       <Hero />
 
-      {/* This section scrolls OVER hero */}
       <div className="relative z-20 bg-white">
         <Education />
         <Projects />

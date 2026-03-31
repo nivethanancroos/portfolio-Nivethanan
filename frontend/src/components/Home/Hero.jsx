@@ -92,7 +92,6 @@
 // };
 
 // export default Hero;
-
 import React, { useEffect, useRef } from "react";
 import profile from "../../assets/Images/profile-Nive.png";
 import DotPattern from "../UI/DotPattern";
@@ -131,13 +130,14 @@ const Hero = () => {
       tl.to(el, {
         opacity: 0,
         scale: 0.95,
-        filter: "blur(6px)",
+        filter: "blur(1px)",
         ease: "none",
       });
     }, heroRef);
 
     return () => ctx.revert();
   }, []);
+
   return (
     <section
       ref={heroRef}
