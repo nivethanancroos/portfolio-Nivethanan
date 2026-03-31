@@ -117,7 +117,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
           <div className="flex items-center gap-4 border-r border-[#2f2a26]/10 pr-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/nivethanan-croos/"
               target="_blank"
               rel="noreferrer"
               className="text-lg text-[#2f2a26] hover:scale-110 hover:text-[#d4a017] transition"
@@ -125,7 +125,7 @@ const Navbar = () => {
               <FaLinkedin size={22} />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/nivethanancroos"
               target="_blank"
               rel="noreferrer"
               className="text-lg text-[#2f2a26] hover:scale-110 hover:text-[#d4a017] transition"

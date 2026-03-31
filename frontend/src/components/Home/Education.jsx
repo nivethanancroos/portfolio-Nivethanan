@@ -13,6 +13,7 @@ const Education = () => {
         "Software Construction",
         "Datastructures & Algorithms",
         "Databse Systems",
+        "Human Computer Interaction",
         "Operating Systems",
         "Computer Network Security",
         "Computer Architecture",
@@ -34,7 +35,7 @@ const Education = () => {
       id: 3,
       title: "G.C.E. Ordinary Level",
       place: "Mn/St. Anne’s National College",
-      period: "Jan 2006 — Dec 2016",
+      period: "Jan 2015 — Dec 2016",
       result: "Results: 8A, C",
       desc: "Foundational education with a focus on well-rounded academic development and versatile learning across core subjects.",
       highlights: [
@@ -88,6 +89,18 @@ const Education = () => {
                 <p className="text-xs text-slate-400 mb-1">{edu.period}</p>
                 <h4 className="font-bold text-sm">{edu.title}</h4>
                 <p className="text-xs text-slate-600">{edu.place}</p>
+
+                {edu.result && (
+                  <span
+                    className={`inline-block mt-2 text-[11px] font-semibold px-2 py-0.5 rounded-full transition ${
+                      activeTab.id === edu.id
+                        ? "bg-[#d4a017]/10 text-[#d4a017] border border-[#d4a017]/20"
+                        : "bg-slate-100 text-slate-600 border border-slate-200"
+                    }`}
+                  >
+                    {edu.result}
+                  </span>
+                )}
               </div>
             ))}
           </div>
@@ -160,18 +173,28 @@ const Education = () => {
 /* Extracted component for reuse */
 const DetailsCard = ({ activeTab }) => {
   return (
-    <div className="bg-white p-5 md:p-8 rounded-3xl shadow-xl border">
-      <h4 className="text-lg md:text-xl font-bold mb-4">Learning Highlights</h4>
+    <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <h4 className="text-lg md:text-xl font-semibold text-[#2f2a26]">
+          Learning Highlights
+        </h4>
+        <div className="h-1 w-10 bg-[#d4a017] rounded-full"></div>
+      </div>
 
-      <p className="text-sm md:text-base text-slate-600 mb-6 italic">
-        "{activeTab.desc}"
+      {/* Description */}
+      <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+        <span className="text-[#d4a017] text-lg">“</span>
+        {activeTab.desc}
+        <span className="text-[#d4a017] text-lg">”</span>
       </p>
 
+      {/* Skills */}
       <div className="flex flex-wrap gap-2">
         {activeTab.highlights.map((skill, i) => (
           <span
             key={i}
-            className="px-3 py-1.5 text-xs md:text-sm bg-slate-100 rounded-full"
+            className="px-3 py-1.5 text-xs md:text-sm font-medium text-[#2f2a26] bg-[#f8f6f2] border border-gray-200 rounded-full hover:bg-[#d4a017]/10 hover:border-[#d4a017] hover:text-[#2f2a26] transition-all duration-200 cursor-default"
           >
             {skill}
           </span>

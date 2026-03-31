@@ -29,8 +29,9 @@ const Projects = () => {
         "AWS",
       ],
       image: IMS,
-      link: "#",
-      github: "#",
+      link: "https://inventrax.sytes.net/",
+      github: "https://github.com/karenthiran/Inventory-Management-System.git",
+      details: "",
     },
     {
       id: 2,
@@ -46,8 +47,9 @@ const Projects = () => {
         "Cloudinary",
       ],
       image: LookupImage,
-      link: "#",
-      github: "#",
+      link: "https://www.lookuplk.com/",
+      github: "https://github.com/nivethanancroos/lookup-website.git",
+      details: "",
     },
     {
       id: 3,
@@ -57,7 +59,8 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
       image: Grazartgallery,
       link: "#",
-      github: "#",
+      github: "https://github.com/nivethanancroos/lookup-website.git",
+      details: "",
     },
     {
       id: 4,
@@ -68,10 +71,11 @@ const Projects = () => {
       image: "https://via.placeholder.com/400x300",
       link: "#",
       github: "#",
+      details: "",
     },
   ];
 
-  const categories = ["All", "Web Apps", "AI/ML"];
+  const categories = ["All", "Web Apps", "UI/UX", "AI/ML"];
 
   const filteredProjects =
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
@@ -97,20 +101,22 @@ const Projects = () => {
           </div>
 
           {/* Categorization Toggle Button Group */}
-          <div className="flex gap-2 p-1 bg-gray-100 rounded-full w-fit mx-auto">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                  filter === cat
-                    ? "bg-gradient-to-r from-[#d4a017] to-[#d4a017] text-white shadow-sm"
-                    : "text-gray-600 hover:text-[#2f2a26] hover:bg-white"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="w-full flex justify-center">
+            <div className="flex gap-1.5 p-1 bg-gray-100 rounded-full w-full max-w-fit overflow-x-auto no-scrollbar sm:gap-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setFilter(cat)}
+                  className={`whitespace-nowrap px-4 py-1.5 text-xs sm:px-6 sm:py-2 sm:text-sm font-medium rounded-full transition-all duration-300 ${
+                    filter === cat
+                      ? "bg-[#d4a017] text-white shadow-sm"
+                      : "text-gray-600 hover:text-[#2f2a26] hover:bg-white"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -121,11 +127,6 @@ const Projects = () => {
               key={project.id}
               className="animate-in fade-in zoom-in duration-500 group relative"
             >
-              {/* Optional Category Badge on UI */}
-              <span className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm text-[#2f2a26] text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full border border-[#d4a017]/30">
-                {project.category}
-              </span>
-
               <div className="transition-all duration-500 group-hover:-translate-y-3 group-hover:shadow-2xl">
                 <ProjectCard
                   {...project}
