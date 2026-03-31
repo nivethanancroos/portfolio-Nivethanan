@@ -57,7 +57,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="bg-[#f9fafb] py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20"
+      className="bg-[#f9fafb] py-10 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20"
     >
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
@@ -190,11 +190,11 @@ const DetailsCard = ({ activeTab }) => {
       </p>
 
       {/* Skills */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-1.5 md:gap-2 justify-start">
         {activeTab.highlights.map((skill, i) => (
           <span
             key={i}
-            className="px-3 py-1.5 text-xs md:text-sm font-medium text-[#2f2a26] bg-[#f8f6f2] border border-gray-200 rounded-full hover:bg-[#d4a017]/10 hover:border-[#d4a017] hover:text-[#2f2a26] transition-all duration-200 cursor-default"
+            className="px-2.5 py-1 text-[11px] md:px-3 md:py-1.5 md:text-sm font-medium text-[#2f2a26] bg-[#f8f6f2] border border-gray-200 rounded-full whitespace-nowrap hover:bg-[#d4a017]/10 hover:border-[#d4a017] transition-all duration-200 cursor-default"
           >
             {skill}
           </span>
