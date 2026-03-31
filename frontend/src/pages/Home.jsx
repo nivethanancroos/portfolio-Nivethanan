@@ -9,9 +9,13 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <Education />
-      <Projects />
-      <AboutMe />
+
+      {/* This section scrolls OVER hero */}
+      <div className="relative z-20 bg-white">
+        <Education />
+        <Projects />
+        <AboutMe />
+      </div>
     </div>
   );
 };
