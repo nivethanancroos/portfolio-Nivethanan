@@ -5,6 +5,8 @@ import IMS from "../../assets/Images/IMS.png";
 import IMSUIUX from "../../assets/Images/IMSUIUX.png";
 import Grazartgallery from "../../assets/Images/graz-gallery-art-portfolio.jpg";
 import GZUIUX from "../../assets/Images/GZUIUX.png";
+import Amazly from "../../assets/Images/AmazlyGifts.png";
+import AmazlyGiftsUI from "../../assets/Images/AmazlyGiftsUI.png";
 
 const Projects = () => {
   const [filter, setFilter] = useState("Web Apps");
@@ -64,7 +66,7 @@ const Projects = () => {
       id: 3,
       category: "Web Apps",
       title: "Graz Art Gallery Website",
-      desc: "Developed a full-stack e-commerce art gallery website with dynamic artwork display, product showcasing, and backend-driven gallery and product management.",
+      desc: "A full-stack e-commerce art gallery website with dynamic artwork display, product showcasing, and backend-driven gallery and product management.",
       tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
       image: Grazartgallery,
       link: "https://www.grazartgallery.com/",
@@ -77,7 +79,7 @@ const Projects = () => {
       title: "Amazly Gifts Website",
       desc: (
         <>
-          Developed a full-stack gift store web application for{" "}
+          A full-stack gift store web application for{" "}
           <strong className="text-[#585858]">Amazly Gifts</strong> using React,
           Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven
           gallery and product management.
@@ -91,9 +93,9 @@ const Projects = () => {
         "MongoDB",
         "Cloudinary",
       ],
-      image: LookupImage,
-      link: "https://www.lookuplk.com/",
-      github: "https://github.com/nivethanancroos/lookup-website.git",
+      image: Amazly,
+      link: "https://testsite.myftp.org/",
+      github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
       details:
         "Designed and developed Amazly Gifts, a modern full-stack gift store web application focused on personalized gifting experiences. Built with React and Tailwind CSS for a responsive and visually engaging frontend, and powered by Node.js, Express.js, and MongoDB for efficient backend operations. Integrated Cloudinary for optimized media handling and implemented dynamic product showcasing with scalable backend architecture.",
     },
@@ -134,13 +136,33 @@ const Projects = () => {
         </>
       ),
       tech: ["Visily", "Adobe Photoshop", "Adobe Illustrator"],
-      image: GZUIUX,
+      image: AmazlyGiftsUI,
       link: "https://www.grazartgallery.com/",
       github: "https://github.com/nivethanancroos/lookup-website.git",
       details: "",
     },
     {
       id: 7,
+      category: "UI/UX",
+      title: "Amazly Gifts UI/UX Design",
+      desc: (
+        <>
+          Designed a modern and user-centered interface for{" "}
+          <strong className="text-[#585858]">Amazly Gifts</strong>, focusing on
+          seamless product discovery, personalized gifting experience, and
+          smooth navigation. Created wireframes and high-fidelity designs to
+          enhance user engagement and visual appeal.
+        </>
+      ),
+      tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
+      image: GZUIUX,
+      link: "https://testsite.myftp.org/",
+      github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
+      details:
+        "Crafted the UI/UX design for Amazly Gifts with a focus on intuitive user journeys and visually appealing layouts. Designed responsive wireframes and high-fidelity prototypes to ensure a seamless browsing and shopping experience. Emphasized clean design, consistent branding, and user engagement to create a modern digital gifting platform.",
+    },
+    {
+      id: 8,
       category: "AI/ML",
       title: "Image Caption Generator",
       desc: "Deep learning model using CNN-LSTM to generate captions for images.",
