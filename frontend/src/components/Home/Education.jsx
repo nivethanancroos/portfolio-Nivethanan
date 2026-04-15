@@ -46,7 +46,7 @@ const Education = () => {
         "Catholicism",
         "History",
         "ICT",
-        "Art",
+        "Arts",
         "Business Studies",
       ],
     },
