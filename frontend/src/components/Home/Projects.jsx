@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ProjectCard from "../Common/ProjectCard";
 import LookupImage from "../../assets/Images/lookup-portfolio2.jpg";
 import IMS from "../../assets/Images/IMS.png";
+import IMSUIUX from "../../assets/Images/IMSUIUX.png";
 import Grazartgallery from "../../assets/Images/graz-gallery-art-portfolio.jpg";
+import GZUIUX from "../../assets/Images/GZUIUX.png";
 
 const Projects = () => {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("Web Apps");
 
   const projects = [
     {
@@ -37,7 +39,14 @@ const Projects = () => {
       id: 2,
       category: "Web Apps",
       title: "Lookup Gift Store Website",
-      desc: "Developed a full-stack showcase web application for Lookup using React, Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven gallery management.",
+      desc: (
+        <>
+          Developed a full-stack showcase web application for{" "}
+          <strong className="text-[#585858]">Lookup</strong> using React,
+          Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven
+          gallery management.
+        </>
+      ),
       tech: [
         "React",
         "Tailwind CSS",
@@ -58,12 +67,80 @@ const Projects = () => {
       desc: "Developed a full-stack e-commerce art gallery website with dynamic artwork display, product showcasing, and backend-driven gallery and product management.",
       tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
       image: Grazartgallery,
-      link: "#",
+      link: "https://www.grazartgallery.com/",
       github: "https://github.com/nivethanancroos/lookup-website.git",
       details: "",
     },
     {
       id: 4,
+      category: "Web Apps",
+      title: "Amazly Gifts Website",
+      desc: (
+        <>
+          Developed a full-stack gift store web application for{" "}
+          <strong className="text-[#585858]">Amazly Gifts</strong> using React,
+          Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven
+          gallery and product management.
+        </>
+      ),
+      tech: [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cloudinary",
+      ],
+      image: LookupImage,
+      link: "https://www.lookuplk.com/",
+      github: "https://github.com/nivethanancroos/lookup-website.git",
+      details:
+        "Designed and developed Amazly Gifts, a modern full-stack gift store web application focused on personalized gifting experiences. Built with React and Tailwind CSS for a responsive and visually engaging frontend, and powered by Node.js, Express.js, and MongoDB for efficient backend operations. Integrated Cloudinary for optimized media handling and implemented dynamic product showcasing with scalable backend architecture.",
+    },
+    {
+      id: 5,
+      category: "UI/UX",
+      title: "Inventory Management System UI/UX Design",
+      desc: (
+        <>
+          Designed an intuitive and user-friendly interface for the{" "}
+          <strong className="text-[#585858]">
+            Inventory Management System
+          </strong>
+          , focusing on improving usability, workflow efficiency, and visual
+          clarity. Created wireframes, prototypes, and high-fidelity designs
+          using <strong className="text-[#585858]">Visily</strong> and enhanced
+          visuals with{" "}
+          <strong className="text-[#585858]">Adobe Photoshop</strong>.
+        </>
+      ),
+      tech: ["Visily", "Adobe Photoshop", "Adobe Illustrator"],
+      image: IMSUIUX,
+      link: "https://app.visily.ai/projects/e40fae56-d69b-4ac1-bf4e-00dd70f954db/boards/2496195",
+      github: "https://github.com/karenthiran/Inventory-Management-System.git",
+      details: "",
+    },
+    {
+      id: 6,
+      category: "UI/UX",
+      title: "Graz Art Gallery UI/UX Design",
+      desc: (
+        <>
+          Designed a visually engaging and user-centered interface for the{" "}
+          <strong className="text-[#585858]">Graz Art Gallery</strong> website,
+          focusing on seamless artwork browsing, intuitive navigation, and an
+          elegant shopping experience. Created wireframes and high-fidelity
+          designs to enhance user interaction and visual storytelling.
+        </>
+      ),
+      tech: ["Visily", "Adobe Photoshop", "Adobe Illustrator"],
+      image: GZUIUX,
+      link: "https://www.grazartgallery.com/",
+      github: "https://github.com/nivethanancroos/lookup-website.git",
+      details: "",
+    },
+    {
+      id: 7,
       category: "AI/ML",
       title: "Image Caption Generator",
       desc: "Deep learning model using CNN-LSTM to generate captions for images.",
@@ -75,7 +152,7 @@ const Projects = () => {
     },
   ];
 
-  const categories = ["All", "Web Apps", "UI/UX", "AI/ML"];
+  const categories = ["Web Apps", "UI/UX", "AI/ML", "All"];
 
   const filteredProjects =
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
