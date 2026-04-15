@@ -9,7 +9,7 @@ import Amazly from "../../assets/Images/AmazlyGifts.png";
 import AmazlyGiftsUI from "../../assets/Images/AmazlyGiftsUI.png";
 
 const Projects = () => {
-  const [filter, setFilter] = useState("Web Apps");
+  const [filter, setFilter] = useState("All");
 
   const projects = [
     {
@@ -174,7 +174,7 @@ const Projects = () => {
     },
   ];
 
-  const categories = ["Web Apps", "UI/UX", "AI/ML", "All"];
+  const categories = ["All", "Web Apps", "UI/UX", "AI/ML"];
 
   const filteredProjects =
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
