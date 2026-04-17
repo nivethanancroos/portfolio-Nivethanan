@@ -4,6 +4,7 @@ import Hero from "../components/Home/Hero";
 import AboutMe from "../components/Home/AboutMe";
 import Education from "../components/Home/Education";
 import Projects from "../components/Home/Projects";
+import Experience from "../components/Home/Experience";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Hero />
 
       <div className="relative z-20 bg-white">
+        <Experience />
         <Education />
         <Projects />
         <AboutMe />
