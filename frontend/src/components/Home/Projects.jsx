@@ -97,8 +97,7 @@ const Projects = () => {
       image: Amazly,
       link: "https://testsite.myftp.org/",
       github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
-      details:
-        "Designed and developed Amazly Gifts, a modern full-stack gift store web application focused on personalized gifting experiences. Built with React and Tailwind CSS for a responsive and visually engaging frontend, and powered by Node.js, Express.js, and MongoDB for efficient backend operations. Integrated Cloudinary for optimized media handling and implemented dynamic product showcasing with scalable backend architecture.",
+      details: "/about",
     },
     {
       id: 5,
@@ -159,8 +158,7 @@ const Projects = () => {
       image: GZUIUX,
       link: "https://testsite.myftp.org/",
       github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
-      details:
-        "Crafted the UI/UX design for Amazly Gifts with a focus on intuitive user journeys and visually appealing layouts. Designed responsive wireframes and high-fidelity prototypes to ensure a seamless browsing and shopping experience. Emphasized clean design, consistent branding, and user engagement to create a modern digital gifting platform.",
+      details: "",
     },
     {
       id: 8,
@@ -181,7 +179,7 @@ const Projects = () => {
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-6 px-6 bg-[#fcfaf8]">
+    <section id="projects" className="py-10 px-6 bg-[#fcfaf8]">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-12">

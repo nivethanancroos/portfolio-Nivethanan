@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink, FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ image, title, desc, tech, link, github, details }) => {
   return (
@@ -72,13 +73,13 @@ const ProjectCard = ({ image, title, desc, tech, link, github, details }) => {
 
           {/* Details Button */}
           {details && (
-            <a
-              href={details}
+            <Link
+              to={details}
               className="flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-[#2f2a26]/20 hover:border-[#d4a017] hover:text-[#d4a017] transition"
             >
               View Details
               <FiArrowRight size={14} />
-            </a>
+            </Link>
           )}
         </div>
       </div>

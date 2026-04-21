@@ -137,7 +137,7 @@ const Navbar = () => {
           <a
             href="/cv.pdf"
             download
-            className="flex items-center gap-2 bg-[#2f2a26] text-white text-xs lg:text-sm px-5 py-2.5 rounded-full hover:bg-[#d4a017] hover:text-[#2f2a26] transition-all duration-300 shadow-md font-bold whitespace-nowrap"
+            className="flex items-center gap-2 bg-[#2f2a26] text-white text-xs lg:text-sm px-5 py-2.5 rounded-full hover:bg-[#d4a017]  transition-all duration-300 shadow-md font-bold whitespace-nowrap"
           >
             <FiDownload className="text-base" />
             Download CV
