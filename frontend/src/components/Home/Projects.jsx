@@ -7,6 +7,7 @@ import Grazartgallery from "../../assets/Images/graz-gallery-art-portfolio.jpg";
 import GZUIUX from "../../assets/Images/GZUIUX.png";
 import Amazly from "../../assets/Images/AmazlyGifts.png";
 import AmazlyGiftsUI from "../../assets/Images/AmazlyGiftsUI.png";
+import ImageCaptionImage from "../../assets/Images/ImageCaptionGen.png";
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
@@ -164,12 +165,12 @@ const Projects = () => {
     {
       id: 8,
       category: "AI/ML",
-      title: "Image Caption Generator",
-      desc: "Deep learning model using CNN-LSTM to generate captions for images.",
-      tech: ["Python", "TensorFlow", "Deep Learning"],
-      image: "https://via.placeholder.com/400x300",
-      link: "#",
-      github: "#",
+      title: "Image Caption Generator using CNN–LSTM",
+      desc: "Developed a deep learning model to automatically generate textual descriptions for images by combining CNN (InceptionV3) for feature extraction and LSTM for sequence generation.",
+      tech: ["Python", "TensorFlow", "NumPy", "Matplotlib"],
+      image: ImageCaptionImage,
+      link: null,
+      github: "https://github.com/karenthiran/Image_Caption_Generator",
       details: "",
     },
   ];

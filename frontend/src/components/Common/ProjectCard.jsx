@@ -44,36 +44,42 @@ const ProjectCard = ({ image, title, desc, tech, link, github, details }) => {
           {/* Top Row */}
           <div className="flex items-center justify-between">
             {/* GitHub */}
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-[#2f2a26] hover:text-[#d4a017] transition"
-            >
-              <FaGithub size={16} />
-              Code
-            </a>
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-[#2f2a26] hover:text-[#d4a017] transition"
+              >
+                <FaGithub size={16} />
+                Code
+              </a>
+            )}
 
             {/* Live Demo Button */}
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full bg-[#2f2a26] text-white hover:bg-[#d4a017] hover:text-[#2f2a26] transition"
-            >
-              Live Demo
-              <FiExternalLink size={14} />
-            </a>
+            {link && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full bg-[#2f2a26] text-white hover:bg-[#d4a017] hover:text-[#2f2a26] transition"
+              >
+                Live Demo
+                <FiExternalLink size={14} />
+              </a>
+            )}
           </div>
 
           {/* Details Button */}
-          <a
-            href={details}
-            className="flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-[#2f2a26]/20 hover:border-[#d4a017] hover:text-[#d4a017] transition"
-          >
-            View Details
-            <FiArrowRight size={14} />
-          </a>
+          {details && (
+            <a
+              href={details}
+              className="flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-[#2f2a26]/20 hover:border-[#d4a017] hover:text-[#d4a017] transition"
+            >
+              View Details
+              <FiArrowRight size={14} />
+            </a>
+          )}
         </div>
       </div>
     </div>
