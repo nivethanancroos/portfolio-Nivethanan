@@ -29,7 +29,7 @@ const businesses = [
 
 const Business = () => {
   return (
-    <section className="py-28 px-6 md:px-20 bg-[#FBFBFD]">
+    <section className="py-18 px-6 md:px-20 bg-[#FBFBFD]">
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-20 text-center">
         <span className="text-[11px] font-black tracking-[0.2em] text-[#d4a017] uppercase bg-[#d4a017]/10 px-4 py-1.5 rounded-full">
