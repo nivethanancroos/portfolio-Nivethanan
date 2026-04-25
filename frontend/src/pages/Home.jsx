@@ -11,7 +11,7 @@ import TechTools from "../components/Home/TechTools";
 
 const Home = () => {
   return (
-    <div>
+    <div id="Homepage">
       <Hero />
 
       <div className="relative z-20 bg-white">

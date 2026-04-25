@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,26 @@ const Navbar = () => {
   const menuRef = useRef(null);
   const lastScrollY = useRef(0);
 
-  const navLinks = ["Home", "About", "Projects", "Skills", "Contact"];
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (section) => {
+    // HOME → always go to top of index page
+    if (section === "home") {
+      navigate("/");
+      return;
+    }
+
+    // other sections
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: section } });
+    } else {
+      const el = document.getElementById(section);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navLinks = ["Home", "About", "Projects", "Ventures", "Contact"];
 
   //  Close on outside click
   useEffect(() => {
@@ -87,9 +107,8 @@ const Navbar = () => {
   rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.04)]"
         >
           {navLinks.map((link, index) => (
-            <a
-              key={index}
-              href={`#${link.toLowerCase()}`}
+            <button
+              onClick={() => handleNavClick(link.toLowerCase())}
               className="relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase text-[#2f2a26]/70 
       transition-all duration-300 ease-in-out rounded-full group hover:text-[#2f2a26]"
             >
@@ -109,7 +128,7 @@ const Navbar = () => {
                 className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#d4a017] 
         rounded-full opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:bottom-1"
               ></span>
-            </a>
+            </button>
           ))}
         </div>
 

@@ -3,12 +3,14 @@ import HeroIMS from "../components/Projects/IMS/HeroIMS";
 import IMSContent from "../components/Projects/IMS/IMSContent";
 import WorkflowSection from "../components/Projects/IMS/WorkflowSection";
 import RequirementAnalysis from "../components/Projects/IMS/RequirementAnalysis";
+import VideoSection from "../components/Projects/IMS/VideoSection";
 
 const ProjectIMS = () => {
   return (
     <div>
-      <HeroIMS />
+      <VideoSection />
       <IMSContent />
+
       <RequirementAnalysis />
       <WorkflowSection />
     </div>

@@ -14,7 +14,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full py-24 bg-white px-6 md:px-20 lg:px-32">
+    <section
+      id="contact"
+      className="w-full py-24 bg-white px-6 md:px-20 lg:px-32"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header - Left Aligned for a modern feel */}
         <div className="mb-16">
