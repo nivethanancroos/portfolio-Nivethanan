@@ -6,176 +6,194 @@ const techStack = [
     name: "HTML5",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    level: 95,
   },
   {
     name: "CSS3",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    level: 85,
   },
   {
     name: "JavaScript",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    level: 80,
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     image: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-    level: 80,
   },
   {
     name: "React",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    level: 80,
   },
   {
     name: "MongoDB",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    level: 77,
   },
   {
-    name: "Express.js",
+    name: "Express",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    level: 70,
   },
   {
-    name: "Node.js",
+    name: "Node",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    level: 75,
+  },
+  {
+    name: "Next.js",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "REST API",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  },
+  {
+    name: "Material UI",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+  },
+  {
+    name: "MySQL",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "Framer Motion",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
 ];
 
 const tools = [
   {
+    name: "Vercel",
+    image:
+      "https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png",
+  },
+  {
     name: "Figma",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    level: 85,
   },
-  {
-    name: "Visily",
-    image: visly,
-    level: 80,
-  },
+  { name: "Visily", image: visly },
   {
     name: "Photoshop",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
-    level: 98,
   },
   {
     name: "Illustrator",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
-    level: 85,
   },
   {
     name: "Git",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    level: 80,
   },
   {
     name: "GitHub",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    level: 80,
   },
   {
     name: "VS Code",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-    level: 90,
   },
   {
     name: "Postman",
     image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
-    level: 80,
   },
 ];
 
-const SkillCard = ({ item }) => {
+const MarqueeRow = ({ items, reverse = false }) => {
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-md border border-[#2f2a26]/10 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-      {/* Icon */}
-      <div className="flex justify-center mb-4">
-        <img
-          src={item.image}
-          alt={item.name}
-          className="w-12 h-12 object-contain"
-        />
+    <div className="overflow-hidden w-full group">
+      <div
+        className={`flex w-max gap-6 py-4 ${
+          reverse ? "animate-marquee-reverse" : "animate-marquee"
+        } group-hover:[animation-play-state:paused]`}
+      >
+        {[...items, ...items].map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center gap-3 px-5 py-2 bg-white/80 backdrop-blur-md 
+            border border-[#2f2a26]/10 rounded-full shadow-sm 
+            hover:shadow-md hover:scale-105 transition-all duration-300"
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-5 h-5 object-contain"
+            />
+            <span className="text-sm text-[#2f2a26] font-medium whitespace-nowrap">
+              {item.name}
+            </span>
+          </div>
+        ))}
       </div>
-
-      {/* Title */}
-      <h4 className="text-lg font-semibold text-center text-[#2f2a26] mb-3">
-        {item.name}
-      </h4>
-
-      {/* Progress Bar */}
-      <div className="w-full bg-[#2f2a26]/10 rounded-full h-2.5">
-        <div
-          className="h-2.5 rounded-full bg-[#d4a017] transition-all duration-500"
-          style={{ width: `${item.level}%` }}
-        ></div>
-      </div>
-
-      {/* Percentage */}
-      <p className="text-sm text-[#2f2a26]/60 text-center mt-2">
-        {item.level}%
-      </p>
     </div>
   );
 };
 
 const TechTools = () => {
   return (
-    <section className="py-20 bg-[#f8f5f0]">
+    <section className="py-16 bg-[#f8f5f0] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* Main Title */}
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2f2a26] relative inline-block">
-            Tech & Tools
-            {/* Underline Accent */}
-            <span className="block h-1 w-16 bg-[#d4a017] mx-auto mt-3 rounded-full"></span>
-          </h2>
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2f2a26]">
+          Tech & Tools
+        </h2>
+        <span className="block h-1 w-16 bg-[#d4a017] mx-auto mt-3 rounded-full"></span>
 
-          {/* Subtitle */}
-          <p className="text-[#2f2a26]/60 mt-4 text-sm md:text-base max-w-xl mx-auto">
-            Technologies and tools I use to build modern, scalable, and visually
-            appealing applications.
-          </p>
-        </div>
+        <p className="text-[#2f2a26]/60 mt-4 text-sm max-w-xl mx-auto">
+          Technologies and tools I use to build modern applications.
+        </p>
 
         {/* Tech Stack */}
-        <div className="mb-16">
-          <h3 className="text-xl font-semibold text-[#d4a017] mb-8">
+        <div className="mt-12">
+          <h3 className="text-lg font-semibold text-[#d4a017] mb-4">
             Tech Stack
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {techStack.map((item, index) => (
-              <SkillCard key={index} item={item} />
-            ))}
-          </div>
+          <MarqueeRow items={techStack} />
         </div>
 
         {/* Tools */}
-        <div>
-          <h3 className="text-xl font-semibold text-[#d4a017] mb-8">
+        <div className="mt-10">
+          <h3 className="text-lg font-semibold text-[#d4a017] mb-4">
             Tools & Design
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {tools.map((item, index) => (
-              <SkillCard key={index} item={item} />
-            ))}
-          </div>
+          <MarqueeRow items={tools} reverse />
         </div>
       </div>
+
+      {/* Animations */}
+      <style>
+        {`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+
+        .animate-marquee-reverse {
+          animation: marquee-reverse 25s linear infinite;
+        }
+        `}
+      </style>
     </section>
   );
 };
