@@ -11,43 +11,78 @@ const IMSContent = () => {
         </h2>
 
         {/* DESCRIPTION */}
-        <p className="text-slate-600 text-lg leading-relaxed mb-8">
+        <p className="text-slate-600 text-lg leading-relaxed mb-10">
           A full-stack inventory management solution designed to streamline item
-          tracking, role-based access control, and reporting across multiple
-          locations. Built with a modern tech stack, the system ensures high
-          performance, scalability, and a seamless user experience.
+          tracking, enforce secure role-based access, and provide real-time
+          reporting across multiple locations. Built with a scalable
+          architecture, the system ensures reliability, performance, and
+          security for modern business operations.
         </p>
 
-        {/* TECH STACK */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          {[
-            "React",
-            "Tailwind CSS",
-            "Spring Boot",
-            "Spring Security",
-            "PostgreSQL",
-            "AWS",
-          ].map((tech, i) => (
-            <span
-              key={i}
-              className="bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-lg text-sm text-slate-700"
-            >
-              {tech}
-            </span>
-          ))}
+        {/* TECH STACK (CATEGORIZED 🔥) */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 className="font-semibold text-slate-900 mb-3">Frontend</h3>
+            <div className="flex flex-wrap gap-2">
+              {["React.js", "HTML", "Tailwind CSS", "JavaScript"].map(
+                (tech, i) => (
+                  <span key={i} className="tag">
+                    {tech}
+                  </span>
+                ),
+              )}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-slate-900 mb-3">Backend</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Java", "Spring Boot"].map((tech, i) => (
+                <span key={i} className="tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-slate-900 mb-3">Database</h3>
+            <div className="flex flex-wrap gap-2">
+              {["PostgreSQL", "AWS RDS"].map((tech, i) => (
+                <span key={i} className="tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-slate-900 mb-3">Security</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Spring Security",
+                "JWT Authentication",
+                "BCrypt Encryption",
+              ].map((tech, i) => (
+                <span key={i} className="tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* FEATURES (adds more professionalism 🔥) */}
-        <div className="grid md:grid-cols-2 gap-6 mb-10">
+        {/* FEATURES */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {[
             "Role-based authentication & authorization",
             "Real-time inventory tracking",
-            "Multi-location management",
-            "Detailed reporting & analytics",
+            "Multi-location warehouse management",
+            "Advanced reporting & analytics dashboard",
           ].map((feature, i) => (
             <div
               key={i}
-              className="p-4 border border-slate-200 rounded-lg bg-slate-50"
+              className="p-5 border border-slate-200 rounded-xl bg-slate-50 hover:shadow-md transition"
             >
               <p className="text-slate-700">{feature}</p>
             </div>
@@ -75,6 +110,18 @@ const IMSContent = () => {
           </a>
         </div>
       </div>
+
+      {/* SMALL STYLE (reusable tag) */}
+      <style jsx>{`
+        .tag {
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          padding: 6px 12px;
+          border-radius: 8px;
+          font-size: 13px;
+          color: #334155;
+        }
+      `}</style>
     </section>
   );
 };
