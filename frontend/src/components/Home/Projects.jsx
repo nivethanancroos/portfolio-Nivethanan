@@ -36,7 +36,7 @@ const Projects = () => {
       image: IMS,
       link: "https://inventrax.sytes.net/",
       github: "https://github.com/karenthiran/Inventory-Management-System.git",
-      details: "a",
+      details: "/project-ims",
     },
     {
       id: 2,
