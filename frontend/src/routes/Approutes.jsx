@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import ScrollToTop from "../ScrollToTop";
 // Layout
 import MainLayout from "../layout/MainLayout";
 
@@ -11,6 +11,8 @@ import ProjectIMS from "../pages/ProjectIMS";
 const Approutes = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <Routes>
         {/* Layout Wrapper */}
         <Route path="/" element={<MainLayout />}>

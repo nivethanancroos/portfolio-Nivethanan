@@ -4,7 +4,10 @@ import IMSVideo from "../../../assets/Images/IMS/IMSvedio.mp4";
 
 const VideoSection = () => {
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-14 px-4 md:px-10">
+    <section
+      id="video"
+      className="bg-gradient-to-b from-slate-50 to-white py-14 px-4 md:px-10"
+    >
       <div className="max-w-6xl mx-auto text-center">
         {/* TITLE */}
         <div className="mb-10">
