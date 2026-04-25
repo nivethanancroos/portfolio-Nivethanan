@@ -8,12 +8,12 @@ const WorkflowSection = () => {
     <section className="bg-slate-50 py-10 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
         {/* TITLE */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 text-center">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-6 text-center">
           Team Collaboration & Workflow
         </h2>
 
         {/* DESCRIPTION */}
-        <p className="text-slate-600 text-lg text-center max-w-3xl mx-auto mb-14">
+        <p className="text-slate-600 text-sm text-center max-w-3xl mx-auto mb-14">
           Our development process began with collaborative group discussions to
           understand system requirements, define workflows, and plan
           implementation strategies. This approach ensured efficient teamwork,

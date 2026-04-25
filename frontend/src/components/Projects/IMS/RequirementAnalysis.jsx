@@ -19,7 +19,7 @@ const RequirementAnalysis = () => {
             alt="Requirement analysis meeting"
             className="
               w-full 
-              h-[180px] 
+              h-[280px] 
               sm:h-[250px] 
               md:h-[320px] 
               lg:h-[420px] 
