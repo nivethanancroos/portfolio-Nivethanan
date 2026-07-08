@@ -72,7 +72,7 @@ const Projects = () => {
       image: Grazartgallery,
       link: "https://www.grazartgallery.com/",
       github: "https://github.com/nivethanancroos/lookup-website.git",
-      details: "",
+      details: "/project-gz",
     },
     {
       id: 4,

@@ -8,6 +8,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import ProjectIMS from "../pages/ProjectIMS";
 import ProjectLookup from "../pages/ProjectLookup";
+import ProjectGz from "../pages/ProjectGz";
 
 const Approutes = () => {
   return (
@@ -21,6 +22,7 @@ const Approutes = () => {
           <Route index element={<Home />} />
           <Route path="project-ims" element={<ProjectIMS />} />
           <Route path="project-lookup" element={<ProjectLookup />} />
+          <Route path="project-gz" element={<ProjectGz />} />
         </Route>
       </Routes>
     </BrowserRouter>
