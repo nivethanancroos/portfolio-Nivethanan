@@ -61,7 +61,7 @@ const Projects = () => {
       image: LookupImage,
       link: "https://www.lookuplk.com/",
       github: "https://github.com/nivethanancroos/lookup-website.git",
-      details: "",
+      details: "/project-lookup",
     },
     {
       id: 3,

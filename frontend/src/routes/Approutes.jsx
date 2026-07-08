@@ -7,6 +7,7 @@ import MainLayout from "../layout/MainLayout";
 // Pages
 import Home from "../pages/Home";
 import ProjectIMS from "../pages/ProjectIMS";
+import ProjectLookup from "../pages/ProjectLookup";
 
 const Approutes = () => {
   return (
@@ -19,6 +20,7 @@ const Approutes = () => {
           {/* Pages inside Outlet */}
           <Route index element={<Home />} />
           <Route path="project-ims" element={<ProjectIMS />} />
+          <Route path="project-lookup" element={<ProjectLookup />} />
         </Route>
       </Routes>
     </BrowserRouter>
