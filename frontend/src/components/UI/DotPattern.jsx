@@ -31,7 +31,7 @@ export function DotPattern({
   const smoothMouse = useRef({ x: -1000, y: -1000 });
 
   const animationRef = useRef();
-  const startTimeRef = useRef(Date.now());
+  const startTimeRef = useRef(null);
 
   const baseRgb = useMemo(() => hexToRgb(baseColor), [baseColor]);
   const glowRgb = useMemo(() => hexToRgb(glowColor), [glowColor]);
@@ -94,6 +94,8 @@ export function DotPattern({
     const mx = smoothMouse.current.x;
     const my = smoothMouse.current.y;
 
+    if (startTimeRef.current === null) startTimeRef.current = Date.now();
+
     const proxSq = proximity * proximity;
     const time = (Date.now() - startTimeRef.current) * 0.001 * waveSpeed;
 
@@ -113,8 +115,6 @@ export function DotPattern({
 
       //  SIMPLE HOVER (NO GLOW)
       if (distSq < proxSq) {
-        const t = 1 - distSq / proxSq;
-
         r = glowRgb.r;
         g = glowRgb.g;
         b = glowRgb.b;
@@ -130,8 +130,6 @@ export function DotPattern({
       ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`;
       ctx.fill();
     }
-
-    animationRef.current = requestAnimationFrame(draw);
   }, [proximity, baseRgb, glowRgb, dotSize, waveSpeed]);
 
   // INIT
@@ -144,7 +142,11 @@ export function DotPattern({
 
   // LOOP
   useEffect(() => {
-    animationRef.current = requestAnimationFrame(draw);
+    const loop = () => {
+      draw();
+      animationRef.current = requestAnimationFrame(loop);
+    };
+    animationRef.current = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(animationRef.current);
   }, [draw]);
 

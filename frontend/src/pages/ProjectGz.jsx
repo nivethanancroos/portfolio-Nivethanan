@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import VedioSectionGz from "../components/Projects/GZ/VedioSectionGz";
 import GrazArtGalleryContent from "../components/Projects/GZ/GrazArtGalleryContent";
 

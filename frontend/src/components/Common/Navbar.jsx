@@ -82,13 +82,13 @@ const Navbar = () => {
 
   return (
     <div
+      ref={menuRef}
       className={`fixed left-0 w-full flex justify-center z-50 transition-transform duration-300
       ${showNav ? "translate-y-0" : "-translate-y-full"}
       top-4 md:top-5`}
     >
       {/* NAVBAR */}
       <nav
-        ref={menuRef}
         className={`relative w-[92%] md:w-full px-6 md:px-12 h-14 md:h-16 flex items-center justify-between transition-all duration-300
         backdrop-blur-xl bg-white/70 border border-[#d4a017]/20 rounded-full shadow-lg 
         pt-1 md:pt-0
