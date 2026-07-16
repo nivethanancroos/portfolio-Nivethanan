@@ -125,7 +125,7 @@ const Projects = () => {
     {
       id: 6,
       category: "UI/UX",
-      title: "Graz Art Gallery UI/UX Design",
+      title: "Amazly Gifts UI/UX Design",
       desc: (
         <>
           Designed a visually engaging and user-centered interface for the{" "}
@@ -144,7 +144,7 @@ const Projects = () => {
     {
       id: 7,
       category: "UI/UX",
-      title: "Amazly Gifts UI/UX Design",
+      title: "Graz Art Gallery UI/UX Design",
       desc: (
         <>
           Designed a modern and user-centered interface for{" "}
