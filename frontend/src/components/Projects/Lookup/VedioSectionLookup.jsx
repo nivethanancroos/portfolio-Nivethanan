@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import LookupVedio from "../../../assets/Images/Lookup/LookupVedio.MOV";
+import LookupVedio from "../../../assets/Images/Lookup/LookupVedio.mp4";
 
 const VedioSectionLookup = () => {
   return (

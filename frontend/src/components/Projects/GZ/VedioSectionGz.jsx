@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import GzVedio from "../../../assets/Images/Gz/Gzvedio.MOV";
+import GzVedio from "../../../assets/Images/Gz/Gzvedio.mp4";
 
 const VedioSectionGz = () => {
   return (
