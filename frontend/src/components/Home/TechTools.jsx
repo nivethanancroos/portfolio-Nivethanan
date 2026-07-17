@@ -113,7 +113,7 @@ const tools = [
 
 const MarqueeRow = ({ items, reverse = false }) => {
   return (
-    <div className="overflow-hidden w-full group">
+    <div id="tools" className="overflow-hidden w-full group">
       <div
         className={`flex w-max gap-6 py-4 ${
           reverse ? "animate-marquee-reverse" : "animate-marquee"

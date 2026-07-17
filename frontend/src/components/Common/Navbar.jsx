@@ -33,7 +33,7 @@ const Navbar = () => {
     }
   };
 
-  const navLinks = ["Home", "Projects", "Ventures", "About", "Contact"];
+  const navLinks = ["Home", "Projects", "Ventures", "Contact"];
 
   // Close on outside click
   useEffect(() => {

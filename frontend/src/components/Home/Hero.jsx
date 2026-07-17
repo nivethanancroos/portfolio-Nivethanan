@@ -215,12 +215,26 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end pt-4">
-            <button className="w-full sm:w-auto px-8 py-4 bg-[#2f2a26] text-white rounded-full text-sm font-bold shadow-lg hover:bg-[#d4a017] hover:text-[#2f2a26] transition-all duration-300">
+            <button
+              onClick={() => {
+                document
+                  .getElementById("experience")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full sm:w-auto px-8 py-4 bg-[#2f2a26] text-white rounded-full text-sm font-bold shadow-lg hover:bg-[#d4a017] hover:text-[#2f2a26] transition-all duration-300"
+            >
               View Experience
             </button>
 
-            <button className="w-full sm:w-auto px-8 py-4 border-2 border-[#d4a017] text-[#2f2a26] rounded-full text-sm font-bold hover:bg-[#d4a017] hover:text-white transition-all duration-300">
-              Download CV
+            <button
+              onClick={() => {
+                document
+                  .getElementById("tools")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full sm:w-auto px-8 py-4 border-2 border-[#d4a017] text-[#2f2a26] rounded-full text-sm font-bold hover:bg-[#d4a017] hover:text-white transition-all duration-300"
+            >
+              Tech & Tools
             </button>
           </div>
         </div>

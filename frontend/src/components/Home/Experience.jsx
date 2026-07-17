@@ -107,10 +107,10 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-[#f8f9fb]">
+    <section id="experience" className="py-14 bg-[#f8f9fb]">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <p className="text-xs md:text-sm font-bold tracking-widest uppercase text-[#d4a017]">
             Professional Background
           </p>
@@ -126,7 +126,7 @@ const Experience = () => {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8"
+            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4"
           >
             {/* Top */}
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
