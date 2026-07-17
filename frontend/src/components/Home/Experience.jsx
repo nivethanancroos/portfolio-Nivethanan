@@ -107,63 +107,65 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-14 bg-[#f8f9fb]">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="experience" className="py-10 md:py-14 bg-[#f8f9fb]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-5 md:px-6">
         {/* Header */}
-        <div className="text-center mb-10">
-          <p className="text-xs md:text-sm font-bold tracking-widest uppercase text-[#d4a017]">
+        <div className="text-center mb-8 md:mb-10">
+          <p className="text-[11px] md:text-sm font-bold tracking-widest uppercase text-[#d4a017]">
             Professional Background
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2f2a26] mt-2">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#2f2a26] mt-2">
             Experience
           </h2>
 
-          <div className="w-24 h-[2px] bg-gray-200 mx-auto mt-5"></div>
+          <div className="w-20 md:w-24 h-[2px] bg-gray-200 mx-auto mt-4 md:mt-5"></div>
         </div>
 
         {/* Experience Card */}
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4"
+            className="bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-sm p-4 md:p-6"
           >
             {/* Top */}
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3 md:gap-4">
               <div>
                 <div className="flex items-center gap-2 text-[#d4a017] mb-2">
-                  <Briefcase size={18} />
-                  <span className="text-sm font-semibold uppercase tracking-wide">
+                  <Briefcase className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                  <span className="text-xs md:text-sm font-semibold uppercase tracking-wide">
                     Internship
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#2f2a26]">
+                <h3 className="text-xl md:text-2xl font-bold text-[#2f2a26]">
                   {exp.role}
                 </h3>
 
-                <p className="text-lg text-gray-600 mt-1">{exp.company}</p>
+                <p className="text-base md:text-lg text-gray-600 mt-1">
+                  {exp.company}
+                </p>
               </div>
 
-              <div className="flex items-center gap-2 text-gray-500">
-                <Calendar size={18} />
+              <div className="flex items-center gap-2 text-sm md:text-base text-gray-500">
+                <Calendar className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                 <span>{exp.duration}</span>
               </div>
             </div>
 
             {/* Responsibilities */}
-            <div className="mt-8">
-              <h4 className="font-semibold text-[#2f2a26] mb-4">
+            <div className="mt-6 md:mt-8">
+              <h4 className="font-semibold text-[#2f2a26] text-sm md:text-base mb-3 md:mb-4">
                 Key Responsibilities
               </h4>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {exp.responsibilities.map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 text-gray-600 leading-7"
+                    className="flex items-start gap-2 md:gap-3 text-sm md:text-base text-gray-600 leading-6 md:leading-7"
                   >
-                    <span className="mt-2 h-2 w-2 rounded-full bg-[#d4a017] flex-shrink-0"></span>
+                    <span className="mt-2 h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-[#d4a017] flex-shrink-0"></span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -171,16 +173,16 @@ const Experience = () => {
             </div>
 
             {/* Technologies */}
-            <div className="mt-8">
-              <h4 className="font-semibold text-[#2f2a26] mb-4">
+            <div className="mt-6 md:mt-8">
+              <h4 className="font-semibold text-[#2f2a26] text-sm md:text-base mb-3 md:mb-4">
                 Tools & Technologies
               </h4>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 md:gap-3">
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 rounded-full bg-[#f3f1eb] text-[#2f2a26] text-sm font-medium border border-[#ece8dd]"
+                    className="px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#f3f1eb] text-[#2f2a26] text-xs md:text-sm font-medium border border-[#ece8dd]"
                   >
                     {tech}
                   </span>
