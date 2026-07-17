@@ -103,40 +103,40 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const heroRef = useRef(null);
 
-  useEffect(() => {
-    const el = heroRef.current;
+  // useEffect(() => {
+  //   const el = heroRef.current;
 
-    const ctx = gsap.context(() => {
-      // Pin Hero
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top top",
-        end: "+=110%",
-        pin: true,
-        pinSpacing: false,
-      });
+  //   const ctx = gsap.context(() => {
+  //     // Pin Hero
+  //     ScrollTrigger.create({
+  //       trigger: el,
+  //       start: "top top",
+  //       end: "+=110%",
+  //       pin: true,
+  //       pinSpacing: false,
+  //     });
 
-      // Timeline for perfect forward + reverse animation
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1.3, // 🔥 smooth both directions
-        },
-      });
+  //     // Timeline for perfect forward + reverse animation
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: el,
+  //         start: "top top",
+  //         end: "bottom top",
+  //         scrub: 1.3, // 🔥 smooth both directions
+  //       },
+  //     });
 
-      // Fade + Zoom + Blur (bidirectional)
-      tl.to(el, {
-        opacity: 0,
-        scale: 0.95,
-        filter: "blur(1px)",
-        ease: "none",
-      });
-    }, heroRef);
+  //     // Fade + Zoom + Blur (bidirectional)
+  //     tl.to(el, {
+  //       opacity: 0,
+  //       scale: 0.95,
+  //       filter: "blur(1px)",
+  //       ease: "none",
+  //     });
+  //   }, heroRef);
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <section

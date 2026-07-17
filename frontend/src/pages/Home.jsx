@@ -14,17 +14,17 @@ const Home = () => {
     <div>
       <Hero />
 
-      <div className="relative z-20 bg-white">
-        <Experience />
-        <Education />
-        <Projects />
+      {/* <div className="relative z-20 bg-white"> */}
+      <Experience />
+      <Education />
+      <Projects />
 
-        <Business />
-        <TechTools />
-        <AboutMe />
-        <Contact />
-      </div>
+      <Business />
+      <TechTools />
+      <AboutMe />
+      <Contact />
     </div>
+    // </div>
   );
 };
 
