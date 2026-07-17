@@ -131,6 +131,7 @@ const businesses = [
     image: LookupImg,
     facebook: "https://www.facebook.com/profile.php?id=100076245941481",
     instagram: "https://www.instagram.com/lookup_lk/",
+
     technologies: [
       "React",
       "Tailwind CSS",
