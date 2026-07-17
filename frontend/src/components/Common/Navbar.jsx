@@ -227,8 +227,9 @@ const Navbar = () => {
         </div>
 
         <a
-          href="/cv.pdf"
-          download
+          href="https://drive.google.com/uc?export=download&id=1sMNJCtYoBbgJepTs8R8DJJSJytaBi6Ld"
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-full flex justify-center items-center gap-2 bg-[#d4a017] text-[#2f2a26] py-3 rounded-xl text-sm font-bold shadow-md active:scale-95"
         >
           <FiDownload />
