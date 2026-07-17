@@ -21,7 +21,7 @@ const Home = () => {
 
       <Business />
       <TechTools />
-      <AboutMe />
+      {/* <AboutMe /> */}
       <Contact />
     </div>
     // </div>

@@ -138,6 +138,8 @@ const businesses = [
       "UI/UX",
       "SEO",
       "Branding",
+      "photoshop",
+      "Illustrator",
     ],
   },
   {
@@ -156,6 +158,7 @@ const businesses = [
       "Social Media",
       "Branding",
       "Marketing",
+      "Meta ads ",
     ],
   },
 ];
