@@ -8,6 +8,7 @@ import GZUIUX from "../../assets/Images/GZUIUX.png";
 import Amazly from "../../assets/Images/AmazlyGifts.png";
 import AmazlyGiftsUI from "../../assets/Images/AmazlyGiftsUI.png";
 import ImageCaptionImage from "../../assets/Images/ImageCaptionGen.png";
+import Japolic from "../../assets/Images/Japolic.png";
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
@@ -179,7 +180,7 @@ const Projects = () => {
         </>
       ),
       tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
-      image: JAPOLIC,
+      image: Japolic,
       link: "https://www.figma.com/design/8D59GkD1L0p3SDJh3c9Vtb/Japolic?m=auto&t=MaJuUugUN46UScqd-6",
       github: "",
       // details: "/project-japolic",
