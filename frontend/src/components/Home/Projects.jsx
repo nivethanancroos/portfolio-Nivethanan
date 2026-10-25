@@ -151,17 +151,17 @@ const Projects = () => {
       desc: (
         <>
           Designed a modern and user-centered interface for{" "}
-          <strong className="text-[#585858]">Amazly Gifts</strong>, focusing on
-          seamless product discovery, personalized gifting experience, and
+          <strong className="text-[#585858]">Graz Art Gallery</strong>, focusing
+          on seamless product discovery, personalized gifting experience, and
           smooth navigation. Created wireframes and high-fidelity designs to
           enhance user engagement and visual appeal.
         </>
       ),
       tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
       image: GZUIUX,
-      link: "https://testsite.myftp.org/",
-      github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
-      details: "",
+      link: "https://app.visily.ai/projects/e40fae56-d69b-4ac1-bf4e-00dd70f954db/boards/2498406",
+      github: "https://github.com/nivethanancroos/graz-art-website.git",
+      details: "/project-gz",
     },
     {
       id: 6,
