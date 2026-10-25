@@ -163,8 +163,30 @@ const Projects = () => {
       github: "https://github.com/nivethanancroos/graz-art-website.git",
       details: "/project-gz",
     },
+
     {
       id: 6,
+      category: "UI/UX",
+      title: "Japolic Brand & UI/UX Design",
+      desc: (
+        <>
+          Designed a modern brand identity and user-centered interface for{" "}
+          <strong className="text-[#585858]">Japolic</strong>, a developer
+          infrastructure platform built for high-performance shared file
+          storage. Developed the visual direction, logo, color palette, and
+          moodboard, alongside product interface concepts focused on storage
+          visibility, usability, and efficient developer workflows.
+        </>
+      ),
+      tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
+      image: JAPOLIC,
+      link: "https://www.figma.com/design/8D59GkD1L0p3SDJh3c9Vtb/Japolic?m=auto&t=MaJuUugUN46UScqd-6",
+      github: "",
+      // details: "/project-japolic",
+    },
+
+    {
+      id: 7,
       category: "AI/ML",
       title: "Image Caption Generator using CNN–LSTM",
       desc: "Developed a deep learning model to automatically generate textual descriptions for images by combining CNN (InceptionV3) for feature extraction and LSTM for sequence generation.",
