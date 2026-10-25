@@ -72,7 +72,7 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
       image: Grazartgallery,
       link: "https://www.grazartgallery.com/",
-      github: "https://github.com/nivethanancroos/lookup-website.git",
+      github: "https://github.com/nivethanancroos/graz-art-website.git",
       details: "/project-gz",
     },
     {
