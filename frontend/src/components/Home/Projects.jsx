@@ -75,33 +75,33 @@ const Projects = () => {
       github: "https://github.com/nivethanancroos/graz-art-website.git",
       details: "/project-gz",
     },
+    // {
+    //   id: 4,
+    //   category: "Web Apps",
+    //   title: "Amazly Gifts Website",
+    //   desc: (
+    //     <>
+    //       A full-stack gift store web application for{" "}
+    //       <strong className="text-[#585858]">Amazly Gifts</strong> using React,
+    //       Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven
+    //       gallery and product management.
+    //     </>
+    //   ),
+    //   tech: [
+    //     "React",
+    //     "Tailwind CSS",
+    //     "Node.js",
+    //     "Express.js",
+    //     "MongoDB",
+    //     "Cloudinary",
+    //   ],
+    //   image: Amazly,
+    //   link: "https://testsite.myftp.org/",
+    //   github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
+    //   details: "/about",
+    // },
     {
       id: 4,
-      category: "Web Apps",
-      title: "Amazly Gifts Website",
-      desc: (
-        <>
-          A full-stack gift store web application for{" "}
-          <strong className="text-[#585858]">Amazly Gifts</strong> using React,
-          Tailwind CSS, Node.js, Express, and MongoDB, with backend-driven
-          gallery and product management.
-        </>
-      ),
-      tech: [
-        "React",
-        "Tailwind CSS",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Cloudinary",
-      ],
-      image: Amazly,
-      link: "https://testsite.myftp.org/",
-      github: "https://github.com/nivethanancroos/AmazlyGifts_ECommerce.git",
-      details: "/about",
-    },
-    {
-      id: 5,
       category: "UI/UX",
       title: "Inventory Management System UI/UX Design",
       desc: (
@@ -125,27 +125,27 @@ const Projects = () => {
       github: "https://github.com/karenthiran/Inventory-Management-System.git",
       details: "",
     },
+    // {
+    //   id: 6,
+    //   category: "UI/UX",
+    //   title: "Amazly Gifts UI/UX Design",
+    //   desc: (
+    //     <>
+    //       Designed a visually engaging and user-centered interface for the{" "}
+    //       <strong className="text-[#585858]">Graz Art Gallery</strong> website,
+    //       focusing on seamless artwork browsing, intuitive navigation, and an
+    //       elegant shopping experience. Created wireframes and high-fidelity
+    //       designs to enhance user interaction and visual storytelling.
+    //     </>
+    //   ),
+    //   tech: ["Visily", "Adobe Photoshop", "Adobe Illustrator"],
+    //   image: AmazlyGiftsUI,
+    //   link: "https://www.grazartgallery.com/",
+    //   github: "https://github.com/nivethanancroos/lookup-website.git",
+    //   details: "",
+    // },
     {
-      id: 6,
-      category: "UI/UX",
-      title: "Amazly Gifts UI/UX Design",
-      desc: (
-        <>
-          Designed a visually engaging and user-centered interface for the{" "}
-          <strong className="text-[#585858]">Graz Art Gallery</strong> website,
-          focusing on seamless artwork browsing, intuitive navigation, and an
-          elegant shopping experience. Created wireframes and high-fidelity
-          designs to enhance user interaction and visual storytelling.
-        </>
-      ),
-      tech: ["Visily", "Adobe Photoshop", "Adobe Illustrator"],
-      image: AmazlyGiftsUI,
-      link: "https://www.grazartgallery.com/",
-      github: "https://github.com/nivethanancroos/lookup-website.git",
-      details: "",
-    },
-    {
-      id: 7,
+      id: 5,
       category: "UI/UX",
       title: "Graz Art Gallery UI/UX Design",
       desc: (
@@ -164,7 +164,7 @@ const Projects = () => {
       details: "",
     },
     {
-      id: 8,
+      id: 6,
       category: "AI/ML",
       title: "Image Caption Generator using CNN–LSTM",
       desc: "Developed a deep learning model to automatically generate textual descriptions for images by combining CNN (InceptionV3) for feature extraction and LSTM for sequence generation.",
