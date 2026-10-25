@@ -184,6 +184,7 @@ const Projects = () => {
       link: "https://www.figma.com/design/8D59GkD1L0p3SDJh3c9Vtb/Japolic?m=auto&t=MaJuUugUN46UScqd-6",
       github: "",
       // details: "/project-japolic",
+      //j
     },
 
     {
