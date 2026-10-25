@@ -8,7 +8,6 @@ import GZUIUX from "../../assets/Images/GZUIUX.png";
 import Amazly from "../../assets/Images/AmazlyGifts.png";
 import AmazlyGiftsUI from "../../assets/Images/AmazlyGiftsUI.png";
 import ImageCaptionImage from "../../assets/Images/ImageCaptionGen.png";
-import JapolicIMG from "../../assets/Images/Japolic.png";
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
