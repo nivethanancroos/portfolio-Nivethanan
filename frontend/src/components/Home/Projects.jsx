@@ -119,7 +119,9 @@ const Projects = () => {
       ),
       tech: ["Visily", "Adobe Photoshop", "Adobe Illustrator"],
       image: IMSUIUX,
-      link: "https://app.visily.ai/projects/e40fae56-d69b-4ac1-bf4e-00dd70f954db/boards/2496195",
+      link: "https://www.figma.com/design/z9zIFYwSzj3WzQbModmWMl/IMS-UOJ?m=auto&t=dDYO4bH7Mx9VF2SQ-6",
+      //visly link
+      // https://app.visily.ai/projects/e40fae56-d69b-4ac1-bf4e-00dd70f954db/boards/2496195",
       github: "https://github.com/karenthiran/Inventory-Management-System.git",
       details: "",
     },
