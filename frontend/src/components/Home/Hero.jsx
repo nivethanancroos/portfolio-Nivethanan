@@ -178,15 +178,13 @@ const Hero = () => {
             </span>
           </h2>
 
-          {/* text comented */}
-
-          {/* <p className="text-sm md:text-base text-[#6f6256] leading-relaxed max-w-sm mx-auto lg:ml-0">
+          <p className="text-sm md:text-base text-[#6f6256] leading-relaxed max-w-sm mx-auto lg:ml-0">
             Specializing in{" "}
             <span className="text-[#d4a017] font-bold">
               Frontend Development
             </span>
             , UI/UX, and Graphic Design—crafting digital experiences.
-          </p> */}
+          </p>
         </div>
 
         {/* CENTER IMAGE */}
